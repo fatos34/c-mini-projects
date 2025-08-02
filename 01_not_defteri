@@ -1,0 +1,64 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+void notYaz() {
+    ofstream dosya("notlar.txt", ios::app); // notlar.txt dosyasına EKLEME modunda aç
+    if (!dosya) {
+        cout << "Dosya açılamadı!" << endl;
+        return;
+    }
+
+    string notSatiri;
+    cout << "Notunuzu girin (çıkmak için 'q' yazın):\n";
+
+    while (true) {
+        getline(cin, notSatiri);
+        if (notSatiri == "q") break;
+        dosya << notSatiri << endl;
+    }
+
+    dosya.close();
+    cout << "Notlar başarıyla kaydedildi!\n";
+}
+
+void notOku() {
+    ifstream dosya("notlar.txt");
+    if (!dosya) {
+        cout << "Dosya bulunamadı!\n";
+        return;
+    }
+
+    dosya.close();
+}
+
+int main() {
+    int secim;
+
+    do {
+        cout << "\n=== NOT DEFTERİ ===\n";
+        cout << "1. Not Yaz\n";
+        cout << "2. Notları Görüntüle\n";
+        cout << "0. Çıkış\n";
+        cout << "Seçiminiz: ";
+        cin >> secim;
+        cin.ignore(); // getline için
+
+        switch (secim) {
+            case 1:
+                notYaz();
+                break;
+            case 2:
+                notOku();
+                break;
+            case 0:
+                cout << "Programdan çıkılıyor...\n";
+                break;
+            default:
+                cout << "Geçersiz seçim!\n";
+        }
+    } while (secim != 0);
+
+    return 0;
+}
