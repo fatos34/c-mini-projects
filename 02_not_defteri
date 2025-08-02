@@ -1,0 +1,45 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    srand(time(0)); // Rastgelelik için
+
+    int secim;
+    cout << "Seçiminizi yapın (0 = Taş, 1 = Kağıt, 2 = Makas): ";
+    cin >> secim;
+
+    // Kullanıcının seçimini yazdır
+    if (secim == 0)
+        cout << "Taş seçtiniz.\n";
+    else if (secim == 1)
+        cout << "Kağıt seçtiniz.\n";
+    else if (secim == 2)
+        cout << "Makas seçtiniz.\n";
+    else {
+        cout << "Geçersiz seçim.\n";
+        return 0;
+    }
+
+    // Bilgisayarın seçimi
+    int bilgisayarsecim = rand() % 3;
+
+    switch (bilgisayarsecim) {
+        case 0: cout << "Bilgisayar Taş seçti.\n"; break;
+        case 1: cout << "Bilgisayar Kağıt seçti.\n"; break;
+        case 2: cout << "Bilgisayar Makas seçti.\n"; break;
+    }
+
+    // Kazananı belirleme
+    if (secim == bilgisayarsecim)
+        cout << "Berabere!\n";
+    else if ((secim == 0 && bilgisayarsecim == 2) || 
+             (secim == 1 && bilgisayarsecim == 0) || 
+             (secim == 2 && bilgisayarsecim == 1))
+        cout << "Kazandınız!\n";
+    else
+        cout << "Kaybettiniz!\n";
+
+    return 0;
+}
