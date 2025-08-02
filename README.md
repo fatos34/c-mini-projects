@@ -3,3 +3,4 @@ Bu depo, C++ dilinde yazılmış gerçek hayattan örneklerdir.Basit ve eğitici
 
 Projeler:
 1-NOT DEFTERİ:Basit bir C++ terminal uygulaması. Kullanıcı not yazabilir ve yazdığı notları .txt dosyasına kaydedip görüntüleyebilir.
+2-TAŞ-KAĞIT-MAKAS OYUNU:Kullanıcı ile bilgisayar arasında oynatır. Rastgele seçim yapan bir bilgisayara karşı kullanıcı hamle yapar ve sonuç hemen ekrana yazdırılır.
