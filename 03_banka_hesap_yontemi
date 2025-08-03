@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+#include <fstream> 
+
+void hesapYaz() {
+    std::cout << "Hesap yazma cagirildi." << std::endl;
+    
+}
+
+void hesapOku() {
+    std::cout << "Hesap okuma cagirildi." << std::endl;
+  
+}
+
+int main() {
+    int secim; 
+
+    do {
+        std::cout << "\n=== BANKA SİSTEMİ ===\n";
+        std::cout << "1. Hesap Oluştur\n";
+        std::cout << "2. Hesap Bilgilerini Oku\n"; 
+        std::cout << "0. Çıkış\n"; 
+
+        std::cout << "Seçiminiz: ";
+        std::cin >> secim;
+
+     
+        switch(secim) {
+            case 1:
+                hesapYaz(); 
+                break;
+            case 2:
+                hesapOku();
+                break;
+            case 0:
+                std::cout << "Programdan cikiliyor...\n";
+                break;
+            default:
+                std::cout << "Geçersiz seçim!\n";
+                break;
+        }
+    } while(secim != 0);
+    return 0; 
+}
