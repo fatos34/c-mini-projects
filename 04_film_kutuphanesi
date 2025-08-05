@@ -1,0 +1,42 @@
+#include <iostream>
+#include<string>
+#include<vector>
+using namespace std;
+struct Film{
+    string baslik;
+    string yonetmen;
+    int yil;
+};
+int main() {
+   
+    std::vector<Film>filmler;
+ char devamMi;
+    do{
+    cout<<"LÜTFEN FİLM BAŞLIĞI GİRİN: ";
+    string yeniBaslik;
+    cin>>yeniBaslik;
+    cout<<"LÜTFEN YONETMEN ADINI GİRİNİZ: ";
+    string yeniYonetmen;
+    cin>>yeniYonetmen;
+    cout<< "LÜTFEN YAYIN YILI GİRİNİZ: ";
+    int yeniYil;
+    cin>> yeniYil;
+    Film yeniFilm;
+    yeniFilm.baslik=yeniBaslik;
+    yeniYonetmen=yeniYonetmen;
+    yeniYil=yeniYil;
+    filmler.push_back(yeniFilm);
+    cout<<"baska bir film eklemek ister misiniz?";
+   
+    cin>> devamMi;
+} while(devamMi=='e' || devamMi=='E');
+
+    for(int i=0;i<filmler.size();i++)
+    {
+        cout<<"FİLM BAŞLIĞI: "<<filmler[i].baslik<<endl;
+        cout<<"FİLM YÖNETMENİ: "<<filmler[i].yonetmen<<endl;
+        cout<<"FİLM YILI: "<<filmler[i].yil<<endl;
+    }
+
+    return 0;
+}
