@@ -1,0 +1,35 @@
+#include <iostream>
+#include<string>
+#include<vector>
+using namespace std;
+struct Gunluk{
+    string icerik;
+    string tarih;
+};
+int main(){
+    
+     std::vector<Gunluk> gunlukler;
+     char devamMi;
+    do{
+   
+    cout<<"lütfen günlük tarihini girin: ";
+    string yeniTarih;
+    getline(cin,yeniTarih);
+    cin.ignore();
+    cout<<"lütfen günlük içeriğini girin: ";
+    string yeniİcerik;
+    getline(cin,yeniİcerik);
+    Gunluk yeniGunluk;
+    yeniGunluk.tarih=yeniTarih;
+    yeniGunluk.icerik=yeniİcerik;
+    gunlukler.push_back(yeniGunluk);
+  cout<<"baska günlük ekler misiniz?";
+  cin>> devamMi;
+    }while(devamMi=='e'|| devamMi=='E');
+    for(int i=0;i<gunlukler.size();i++)
+    {
+        cout<<"gunluk iceriği: "<<gunlukler[i].icerik<<endl;
+        cout<<"gunluk tarihi: "<<gunlukler[i].tarih<<endl;
+          }
+          return 0;
+}
