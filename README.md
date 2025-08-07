@@ -7,3 +7,4 @@ Projeler:
 3-BANKA HESABI YÖNTEMİ:Bu proje, C++ ile yazılmış, temel bankacılık işlemlerini (hesap oluşturma, listeleme) konsol üzerinden yapmanızı sağlayan basit bir sistemdir
 4- FİLM KÜTÜPHANESİ: Program, kullanıcıdan film bilgilerini (başlık, yönetmen, yayın yılı) alır ve bunları bir liste halinde saklar. Kullanıcı istediği kadar film ekleyebilir. Ekleme işlemi bittikten sonra, program tüm filmleri ekranda listeler.
 5-GÜNLÜK UYGULAMASI:Bu proje, C++ ile geliştirilmiş, konsol tabanlı basit bir günlük uygulamasıdır. Kullanıcıların günlük girişlerini (tarih ve içerik) eklemesine ve eklenen tüm girişleri listelemesine olanak tanır.
+6-ÖĞRENCİ BİLGİ SİSTEMİ:Bu proje, C++ ile geliştirilmiş, konsol tabanlı basit bir öğrenci bilgi sistemi uygulamasıdır. Kullanıcıların öğrenci bilgilerini (isim, soyisim, numara, not ortalaması) dinamik olarak eklemesine ve eklenen tüm öğrencileri listelemesine olanak tanır.
