@@ -1,0 +1,51 @@
+#include <iostream>
+#include<string>
+#include<vector>
+using namespace std;
+struct Ogrenci{
+    string isim;
+    string soyisim;
+    string numara;
+    string notOrtalama;
+};
+int main(){
+    std::vector<Ogrenci> ogrenciler;
+    char devamMi;
+
+do{
+    cout<<"lütfen ögrenci ismi giriniz: ";
+    string yeniİsim;
+    getline(cin,yeniİsim);
+    cin.ignore();
+     cout<<"lütfen ögrenci soyismi giriniz: ";
+    string yeniSoyisim;
+    getline(cin,yeniSoyisim);
+      cin.ignore();
+      cout<<"lütfen ögrenci numarası giriniz: ";
+    string yeniNumara;
+    getline(cin,yeniNumara);
+    cin.ignore();
+      cout<<"lütfen not ortalama giriniz: ";
+    string yeniOrtalama;
+    getline(cin,yeniOrtalama);
+    cin.ignore();
+    
+    Ogrenci yeniOgrenci;
+    yeniOgrenci.isim=yeniİsim;
+    yeniOgrenci.soyisim=yeniSoyisim;
+    yeniOgrenci.numara=yeniNumara;
+    yeniOgrenci.notOrtalama=yeniOrtalama;
+    ogrenciler.push_back(yeniOgrenci);
+    cout<<"baska ogrenci ekler misiniz?";
+    cin>> devamMi;
+  }while(devamMi=='e' || devamMi=='E');
+  for(int i=0; i<ogrenciler.size();i++)
+  {
+ cout<<"<ogrenci ismi: "<<ogrenciler[i].isim<<endl;
+ cout<<"<ogrenci soyismi: "<<ogrenciler[i].soyisim<<endl;
+ cout<<"<ogrenci numara: "<<ogrenciler[i].numara<<endl;
+ cout<<"<ogrenci not ortalam: "<<ogrenciler[i].notOrtalama<<endl;
+         
+  }
+  return 0;
+}
